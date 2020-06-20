@@ -1,3 +1,5 @@
+package ArrayList;
+
 // ED mais simples que existe. Armazena uma sequência de valores de mesmo tipo.
 public class RevisaoVetoresArrays {
     public static void main(String[] args) {

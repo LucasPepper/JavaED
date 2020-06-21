@@ -97,7 +97,6 @@ public class Lista<T> {
         }
     }
     
-
     public void removerPosicao(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida!");
@@ -120,7 +119,7 @@ public class Lista<T> {
         }
     }
 
-    // Retorna o valor na posição determinada
+    // Retorna o elemento na posição determinada
     public T buscaPosicao(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida!");
@@ -136,6 +135,33 @@ public class Lista<T> {
             }
         }
         return -1;
+    }
+
+	public boolean contem(T elemento){
+		
+		/*int pos = busca(elemento);
+		if (pos > -1){
+			return true;
+		}
+		
+		return false;*/
+		
+		return buscaElemento(elemento) > -1; //>=0
+	}
+
+    public void limpar() {
+        // Opção 1
+        // this.elementos = (T[]) new Object[this.elementos.length];
+
+        // Opção 2
+        // this.tamanho = 0;
+
+        // Opção 3
+        for (int i = 0; i < this.tamanho; i++) {
+            this.elementos[i] = null;
+        }
+        this.tamanho = 0;
+        
     }
 
     // Como a ideia é encontrar a última ocorrência de um elemento, é melhor começar percorrendo do último índice

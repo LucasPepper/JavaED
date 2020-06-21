@@ -10,7 +10,7 @@ public class TestaLista {
         try {
             vetor.adiciona(contato42);
             } catch (Exception e) {
-            //TODO: handle exception
+            e.printStackTrace();
         }
     }
 }
